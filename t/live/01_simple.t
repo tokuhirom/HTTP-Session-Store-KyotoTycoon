@@ -3,13 +3,12 @@ use warnings;
 use Test::More;
 use HTTP::Session::Store::KyotoTycoon;
 use HTTP::Session::State::Null;
-use File::Which;
-use Test::TCP;
+use Test::Requires 'File::Which', 'Test::TCP';
 
-my $ktserver = which('ktserver');
+my $ktserver = File::Which::which('ktserver');
 plan skip_all => 'missing ktserver' unless $ktserver;
 
-test_tcp(
+Test::TCP::test_tcp(
     client => sub {
         my $port = shift;
 
