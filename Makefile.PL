@@ -13,5 +13,5 @@ readme_markdown_from 'lib/HTTP/Session/Store/KyotoTycoon.pm';
 tests 't/*.t t/*/*.t t/*/*/*.t t/*/*/*/*.t';
 test_requires 'Test::More' => 0.96; # done_testing, subtest
 author_tests('xt');
-include 'Test::Requires';
+include('Test::Requires');
 WriteAll;
