@@ -59,7 +59,7 @@ HTTP::Session::Store::KyotoTycoon - HTTP::Session with Cache::KyotoTycoon
     use HTTP::Session::Store::KyotoTycoon;
 
     HTTP::Session->new(
-        store => HTTP::Session::Store::Memcached->new(
+        store => HTTP::Session::Store::KyotoTycoon->new(
             host => 'localhost',
             port => 1978,
             db   => 0,
